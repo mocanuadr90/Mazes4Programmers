@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <!--Modal Error-->
+        <div class="modal" id="modalError" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Error</h5>
+                </div>
+                <div class="modal-body">
+                  <p>Congratulations, you have solved the maze. Try another one!</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <!--Modal success-->
+        <div class="modal" id="modalSuccess" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Maze solved</h5>
+                </div>
+                <div class="modal-body">
+                  <p>Congratulations, you have solved the maze. Try another one!</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <!--Row containing the maze size text input field-->
+        <div class="row items-centered" id="inputDiv">
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="mazeSize">Number of cells per row</label>
+                    <input type="text" class="form-control" id="txtNrRows" placeholder="Enter the number of cells per row">
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="mazeSize">Number of cells per column</label>
+                    <input type="text" class="form-control" id="txtNrCols" placeholder="Enter the number of cells per column">
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="mazeSize">Algorithm</label>
+                    <select id="selAlgorithm" class="form-control">
+                        <option value="binary_tree">Binary Tree</option>
+                        <option value="sidewinder">Sidewinder</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!--Row containing the generate maze button-->
+        <div class="row">
+            <div class="col-sm"></div>
+            <div class="col-sm">
+                <div class="form-group items-centered">
+                    <button type="button" class="btn btn-primary" id="btnGenerate">Generate Maze</button>
+                </div>
+            </div>
+            <div class="col-sm"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm"></div>
+            <div class="col-sm">
+                <div class="form-group items-centered" id="divCanvas">
+                    <canvas id="myCanvas"></canvas>
+                </div>
+            </div>
+            <div class="col-sm"></div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="cell.js" type="text/javascript"></script>
+        <script src="canvas_builder.js" type="text/javascript"></script>
+        <script src="algorithm.js" type="text/javascript"></script>
+        <script src="chapter1/binary_tree.js" type="text/javascript"></script>
+        <script src="chapter1/sidewinder.js" type="text/javascript"></script>
+        <script src="game.js" type="text/javascript"></script>
+        <script src="index.js" type="text/javascript"></script>
+    </body>
+</html>

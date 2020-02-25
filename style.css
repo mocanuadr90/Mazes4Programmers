@@ -1,0 +1,19 @@
+.items-centered {
+    text-align: center;
+}
+
+#inputDiv{
+    margin: 10px;
+}
+
+#canvasMaze {
+    border: 1px solid black;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    background: white;
+}
+
+#myCanvas{
+    display: none;
+}
